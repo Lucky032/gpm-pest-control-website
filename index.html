@@ -1,0 +1,1848 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071c2c">
+  <meta name="description" content="GPM Pest Control offers pest management enquiries for homes, offices and commercial spaces.">
+  <title>GPM Pest Control | Professional Pest Management</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #071c2c;
+      --navy2: #102c40;
+      --green: #b8f34b;
+      --green-dark: #4c7916;
+      --white: #ffffff;
+      --muted: #71808b;
+      --light: #f5f8f4;
+      --border: #e5ebe3;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--navy);
+      background: #fff;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: "Manrope", sans-serif;
+      line-height: 1.2;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    button, input, select, textarea {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .announcement {
+      padding: 8px 15px;
+      text-align: center;
+      background: var(--green);
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(7, 28, 44, .97);
+      border-bottom: 1px solid rgba(255,255,255,.1);
+      backdrop-filter: blur(14px);
+    }
+
+    .navbar {
+      min-height: 78px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .brand-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 13px;
+      display: grid;
+      place-items: center;
+      background: var(--green);
+      color: var(--navy);
+      font-size: 23px;
+      font-weight: 900;
+    }
+
+    .brand-name {
+      font-family: "Manrope", sans-serif;
+      font-size: 21px;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    .brand-name small {
+      display: block;
+      color: var(--green);
+      font-size: 10px;
+      letter-spacing: 2px;
+      margin-top: 5px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      color: #d9e2e9;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .nav-links > a:not(.btn):hover {
+      color: var(--green);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 0;
+      color: white;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 20px;
+      border-radius: 9px;
+      border: 0;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 800;
+      transition: .2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-green {
+      color: var(--navy);
+      background: var(--green);
+    }
+
+    .btn-green:hover {
+      background: #cdfb82;
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,.35);
+      color: white;
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,.08);
+    }
+
+    /* HERO */
+
+    .hero {
+      background: var(--navy);
+      color: white;
+      padding: 82px 0 88px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      right: -220px;
+      top: -250px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(184,243,75,.15), transparent 70%);
+    }
+
+    .hero-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 65px;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--green);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 11px;
+      font-weight: 800;
+      margin-bottom: 21px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      height: 2px;
+      width: 25px;
+      background: var(--green);
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 5vw, 62px);
+      letter-spacing: -2.5px;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span {
+      color: var(--green);
+    }
+
+    .hero-copy {
+      color: #bdcad3;
+      max-width: 490px;
+      font-size: 15px;
+      line-height: 1.9;
+      margin-bottom: 29px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .hero-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 30px;
+      color: #d6e0e6;
+      font-size: 12px;
+    }
+
+    .hero-points span::before {
+      content: "✓";
+      color: var(--green);
+      margin-right: 7px;
+      font-weight: 900;
+    }
+
+    .hero-image-frame {
+      padding: 9px;
+      border: 1px solid rgba(184,243,75,.3);
+      border-radius: 25px;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 18px;
+    }
+
+    .hero-badge {
+      position: absolute;
+      left: -25px;
+      bottom: 30px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: white;
+      color: var(--navy);
+      border-radius: 13px;
+      padding: 15px 18px;
+      box-shadow: 0 12px 35px rgba(0,0,0,.16);
+    }
+
+    .hero-badge-icon {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 11px;
+      background: #effbdc;
+      font-size: 21px;
+    }
+
+    .hero-badge strong {
+      display: block;
+      font-size: 12px;
+    }
+
+    .hero-badge small {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    /* TRUST */
+
+    .trust-strip {
+      padding: 25px 0;
+      background: var(--light);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .trust-icon {
+      font-size: 24px;
+    }
+
+    .trust-item strong {
+      display: block;
+      font-size: 12px;
+    }
+
+    .trust-item small {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    /* SHARED SECTIONS */
+
+    section {
+      padding: 85px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 42px;
+    }
+
+    .section-kicker {
+      color: #638d25;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 900;
+      margin-bottom: 13px;
+    }
+
+    .section-heading h2 {
+      color: var(--navy);
+      font-size: clamp(30px, 4vw, 43px);
+      letter-spacing: -1.3px;
+      margin-bottom: 15px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* SERVICES */
+
+    .services-section {
+      background: var(--light);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 26px;
+    }
+
+    .service-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 19px;
+      overflow: hidden;
+      transition: transform .25s, box-shadow .25s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 45px rgba(7,28,44,.12);
+    }
+
+    .service-photo {
+      position: relative;
+      height: 290px;
+      background: #e2e9e0;
+      overflow: hidden;
+    }
+
+    .service-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform .45s ease;
+    }
+
+    .service-card:hover .service-photo img {
+      transform: scale(1.05);
+    }
+
+    .service-photo::after {
+      content: "";
+      position: absolute;
+      inset: 45% 0 0;
+      background: linear-gradient(transparent, rgba(4,19,29,.65));
+      pointer-events: none;
+    }
+
+    .service-label {
+      position: absolute;
+      z-index: 1;
+      left: 17px;
+      bottom: 16px;
+      padding: 7px 12px;
+      border-radius: 6px;
+      background: rgba(7,28,44,.88);
+      color: var(--green);
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .service-content {
+      padding: 24px;
+    }
+
+    .service-content h3 {
+      color: var(--navy);
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+
+    .service-content p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.85;
+      margin-bottom: 18px;
+    }
+
+    .service-link {
+      color: var(--green-dark);
+      font-size: 13px;
+      font-weight: 800;
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .service-link:hover {
+      text-decoration: underline;
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .about-image-wrap {
+      position: relative;
+    }
+
+    .about-image {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    .about-caption {
+      position: absolute;
+      right: -12px;
+      bottom: 24px;
+      padding: 16px 19px;
+      background: var(--green);
+      color: var(--navy);
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 800;
+      box-shadow: 0 10px 25px rgba(0,0,0,.1);
+    }
+
+    .about-copy h2 {
+      color: var(--navy);
+      font-size: clamp(30px, 4vw, 43px);
+      letter-spacing: -1.4px;
+      margin-bottom: 18px;
+    }
+
+    .about-copy > p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.9;
+      margin-bottom: 25px;
+    }
+
+    .benefit-list {
+      display: grid;
+      gap: 17px;
+      margin-bottom: 27px;
+    }
+
+    .benefit {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .benefit-check {
+      width: 26px;
+      height: 26px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #edf8df;
+      color: var(--green-dark);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .benefit strong {
+      display: block;
+      font-size: 13px;
+    }
+
+    .benefit p {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* PROCESS */
+
+    .process-section {
+      background: var(--navy);
+      color: white;
+    }
+
+    .process-section .section-heading h2 {
+      color: white;
+    }
+
+    .process-section .section-heading p {
+      color: #b1c1cb;
+    }
+
+    .process-section .section-kicker {
+      color: var(--green);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .process-card {
+      padding: 25px 22px;
+      border-radius: 15px;
+      border: 1px solid rgba(255,255,255,.13);
+      background: rgba(255,255,255,.035);
+    }
+
+    .process-number {
+      color: var(--green);
+      font-size: 29px;
+      font-family: "Manrope", sans-serif;
+      font-weight: 800;
+      margin-bottom: 17px;
+    }
+
+    .process-card h3 {
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    .process-card p {
+      color: #b1c1cb;
+      font-size: 12px;
+      line-height: 1.85;
+    }
+
+    /* FAQ */
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 55px;
+      align-items: start;
+    }
+
+    .faq-intro h2 {
+      font-size: clamp(30px, 4vw, 42px);
+      letter-spacing: -1px;
+      margin-bottom: 15px;
+    }
+
+    .faq-intro p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    details {
+      padding: 18px 20px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      color: var(--green-dark);
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    details p {
+      color: var(--muted);
+      font-size: 13px;
+      padding-top: 13px;
+      line-height: 1.8;
+    }
+
+    /* CONTACT */
+
+    .contact-section {
+      background: var(--light);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 45px;
+      align-items: start;
+    }
+
+    .contact-copy h2 {
+      font-size: clamp(31px, 4vw, 43px);
+      letter-spacing: -1.2px;
+      margin-bottom: 17px;
+    }
+
+    .contact-copy > p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 26px;
+    }
+
+    .contact-info {
+      display: grid;
+      gap: 17px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+    }
+
+    .contact-symbol {
+      width: 45px;
+      height: 45px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      background: #e7f4d5;
+      border-radius: 12px;
+      font-size: 19px;
+    }
+
+    .contact-item strong {
+      display: block;
+      font-size: 13px;
+    }
+
+    .contact-item span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .contact-form {
+      background: white;
+      padding: 30px;
+      border: 1px solid var(--border);
+      border-radius: 19px;
+      box-shadow: 0 15px 40px rgba(7,28,44,.07);
+    }
+
+    .contact-form h3 {
+      font-size: 23px;
+      margin-bottom: 7px;
+    }
+
+    .form-intro {
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 22px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .form-field {
+      margin-bottom: 15px;
+    }
+
+    .form-field label {
+      display: block;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 7px;
+    }
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      width: 100%;
+      padding: 12px 13px;
+      border: 1px solid #dfe6df;
+      border-radius: 8px;
+      outline: none;
+      background: white;
+      color: var(--navy);
+      font-size: 13px;
+    }
+
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      border-color: #8fbd43;
+    }
+
+    .form-field textarea {
+      min-height: 95px;
+      resize: vertical;
+    }
+
+    .contact-form .btn {
+      width: 100%;
+      padding: 15px;
+    }
+
+    .form-note {
+      margin-top: 12px;
+      color: #89949a;
+      font-size: 10px;
+      text-align: center;
+    }
+
+    /* CTA */
+
+    .cta-band {
+      padding: 42px 0;
+      background: var(--green);
+    }
+
+    .cta-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .cta-content h2 {
+      color: var(--navy);
+      font-size: clamp(24px, 3vw, 34px);
+      letter-spacing: -1px;
+    }
+
+    .cta-content p {
+      color: #42552a;
+      font-size: 13px;
+      margin-top: 8px;
+    }
+
+    .cta-content .btn {
+      flex-shrink: 0;
+      background: var(--navy);
+      color: white;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #061522;
+      color: white;
+      padding: 48px 0 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 34px;
+    }
+
+    .footer-about p {
+      max-width: 330px;
+      color: #9aabb7;
+      font-size: 12px;
+      line-height: 1.9;
+      margin-top: 17px;
+    }
+
+    .footer-column h4 {
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+
+    .footer-column a {
+      display: block;
+      color: #9aabb7;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+
+    .footer-column a:hover {
+      color: var(--green);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.1);
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      color: #8496a3;
+      font-size: 11px;
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      z-index: 999;
+      right: 20px;
+      bottom: 20px;
+      width: 57px;
+      height: 57px;
+      border-radius: 50%;
+      background: #25d366;
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 26px;
+      box-shadow: 0 8px 25px rgba(0,0,0,.2);
+      transition: transform .2s;
+    }
+
+    .floating-whatsapp:hover {
+      transform: scale(1.08);
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 950px) {
+      .nav-links {
+        gap: 14px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .hero-grid {
+        gap: 35px;
+      }
+
+      .hero-image {
+        height: 370px;
+      }
+
+      .about-grid {
+        gap: 35px;
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        width: calc(100% - 30px);
+      }
+
+      .announcement {
+        font-size: 9px;
+      }
+
+      .navbar {
+        min-height: 69px;
+      }
+
+      .brand-name {
+        font-size: 18px;
+      }
+
+      .brand-icon {
+        width: 39px;
+        height: 39px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 69px;
+        left: 0;
+        right: 0;
+        background: var(--navy);
+        padding: 18px 20px 23px;
+        border-top: 1px solid rgba(255,255,255,.1);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links > a:not(.btn) {
+        padding: 11px 4px;
+        font-size: 14px;
+      }
+
+      .nav-links .btn {
+        margin-top: 10px;
+      }
+
+      .hero {
+        padding: 55px 0 60px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .hero h1 {
+        font-size: clamp(39px, 10vw, 53px);
+        letter-spacing: -1.8px;
+      }
+
+      .hero-copy {
+        font-size: 14px;
+      }
+
+      .hero-image {
+        height: 310px;
+      }
+
+      .hero-badge {
+        left: 8px;
+        bottom: 20px;
+        padding: 12px;
+      }
+
+      .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 10px;
+      }
+
+      .trust-item {
+        justify-content: flex-start;
+      }
+
+      .trust-item strong {
+        font-size: 11px;
+      }
+
+      .trust-item small {
+        font-size: 10px;
+      }
+
+      section {
+        padding: 62px 0;
+      }
+
+      .section-heading {
+        margin-bottom: 30px;
+      }
+
+      .section-heading h2 {
+        font-size: 31px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .service-photo {
+        height: 250px;
+      }
+
+      .service-content {
+        padding: 21px;
+      }
+
+      .about-grid,
+      .faq-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .about-image {
+        height: 320px;
+      }
+
+      .about-caption {
+        right: 8px;
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .process-card {
+        padding: 19px 15px;
+      }
+
+      .process-card h3 {
+        font-size: 13px;
+      }
+
+      .process-card p {
+        font-size: 11px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .contact-form {
+        padding: 22px 18px;
+      }
+
+      .cta-content {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+      }
+
+      .footer-about {
+        grid-column: 1 / -1;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+
+      .floating-whatsapp {
+        right: 14px;
+        bottom: 14px;
+        width: 52px;
+        height: 52px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="announcement">
+    PROFESSIONAL PEST CONTROL · HOME · OFFICE · COMMERCIAL
+  </div>
+
+  <header>
+    <div class="container navbar">
+
+      <a href="#home" class="brand" aria-label="GPM Pest Control home">
+        <div class="brand-icon">G</div>
+        <div class="brand-name">
+          GPM
+          <small>PEST CONTROL</small>
+        </div>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle"
+              aria-label="Toggle navigation"
+              aria-expanded="false">☰</button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About Us</a>
+        <a href="#process">Our Process</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="btn btn-green">Get a Quote ↗</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO SECTION -->
+
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+
+        <div>
+          <div class="eyebrow">A cleaner space starts here</div>
+
+          <h1>
+            Your Space.<br>
+            Your Safety.<br>
+            <span>Pest-Free Living.</span>
+          </h1>
+
+          <p class="hero-copy">
+            Professional pest management solutions for homes and businesses.
+            Tell us about your pest problem and enquire about a suitable service
+            for your space.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-green">Book a Service ↗</a>
+            <a href="#services" class="btn btn-outline">Explore Services ↓</a>
+          </div>
+
+          <div class="hero-points">
+            <span>Residential services</span>
+            <span>Commercial services</span>
+            <span>Enquiry support</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-image-frame">
+            <img
+              class="hero-image"
+              src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=85"
+              alt="Professional home maintenance technician at work"
+              fetchpriority="high">
+          </div>
+
+          <div class="hero-badge">
+            <div class="hero-badge-icon">✓</div>
+            <div>
+              <strong>Professional Service</strong>
+              <small>Careful pest management</small>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+
+    <div class="trust-strip">
+      <div class="container trust-grid">
+
+        <div class="trust-item">
+          <div class="trust-icon">🏠</div>
+          <div>
+            <strong>Residential Care</strong>
+            <small>Solutions for your home</small>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon">🏢</div>
+          <div>
+            <strong>Commercial Services</strong>
+            <small>For offices & businesses</small>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon">🧤</div>
+          <div>
+            <strong>Careful Treatment</strong>
+            <small>Service-specific approach</small>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon">📞</div>
+          <div>
+            <strong>Easy Enquiries</strong>
+            <small>Contact our team</small>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SERVICES SECTION: LOCAL IMAGES -->
+
+    <section class="services-section" id="services">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="section-kicker">Our Services</div>
+          <h2>Professional Pest Control Solutions</h2>
+          <p>
+            Explore our pest control services for common household and
+            commercial pest concerns.
+          </p>
+        </div>
+
+        <div class="services-grid">
+
+          <!-- COCKROACH -->
+
+          <article class="service-card">
+            <div class="service-photo">
+              <img
+                src="1.webp"
+                alt="Cockroach control and treatment service"
+                loading="lazy">
+              <span class="service-label">Kitchen Protection</span>
+            </div>
+
+            <div class="service-content">
+              <h3>Cockroach Control</h3>
+              <p>
+                Treatment options to help manage cockroaches in kitchens,
+                bathrooms and other affected areas.
+              </p>
+              <a href="#contact" class="service-link"
+                 data-service="Cockroach Control">
+                Book a Service <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- BED BUGS -->
+
+          <article class="service-card">
+            <div class="service-photo">
+              <img
+                src="2.webp"
+                alt="Bed bug inspection and treatment service"
+                loading="lazy">
+              <span class="service-label">Bedroom Protection</span>
+            </div>
+
+            <div class="service-content">
+              <h3>Bed Bug Control</h3>
+              <p>
+                Inspection and treatment options for bed bugs around mattresses,
+                beds, furniture and bedroom spaces.
+              </p>
+              <a href="#contact" class="service-link"
+                 data-service="Bed Bug Control">
+                Book a Service <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- ANTS -->
+
+          <article class="service-card">
+            <div class="service-photo">
+              <img
+                src="3.webp"
+                alt="Ant control service for home and kitchen"
+                loading="lazy">
+              <span class="service-label">Ant Management</span>
+            </div>
+
+            <div class="service-content">
+              <h3>Ant Control</h3>
+              <p>
+                Help manage ant trails and entry points around kitchens,
+                storage areas and other parts of your property.
+              </p>
+              <a href="#contact" class="service-link"
+                 data-service="Ant Control">
+                Book a Service <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- RATS -->
+
+          <article class="service-card">
+            <div class="service-photo">
+              <img
+                src="4.webp"
+                alt="Rat and rodent control service"
+                loading="lazy">
+              <span class="service-label">Rodent Protection</span>
+            </div>
+
+            <div class="service-content">
+              <h3>Rat & Rodent Control</h3>
+              <p>
+                Identify rodent activity and entry points, with practical
+                control and prevention recommendations.
+              </p>
+              <a href="#contact" class="service-link"
+                 data-service="Rat and Rodent Control">
+                Book a Service <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+
+    <section id="about">
+      <div class="container about-grid">
+
+        <div class="about-image-wrap">
+          <img
+            class="about-image"
+            src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=85"
+            alt="Professional technician carrying out a home service"
+            loading="lazy">
+
+          <div class="about-caption">
+            The right care for your space.
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <div class="section-kicker">Why Choose GPM</div>
+
+          <h2>Thoughtful Pest Management. Professional Service.</h2>
+
+          <p>
+            Unwanted pests can affect the comfort of your home and the cleanliness
+            of your business. GPM Pest Control helps you explore suitable service
+            options based on the pest and the affected area.
+          </p>
+
+          <div class="benefit-list">
+
+            <div class="benefit">
+              <div class="benefit-check">✓</div>
+              <div>
+                <strong>Service Based on Your Needs</strong>
+                <p>Discuss solutions for the pest and affected area.</p>
+              </div>
+            </div>
+
+            <div class="benefit">
+              <div class="benefit-check">✓</div>
+              <div>
+                <strong>Home & Business Support</strong>
+                <p>Enquire about residential and commercial services.</p>
+              </div>
+            </div>
+
+            <div class="benefit">
+              <div class="benefit-check">✓</div>
+              <div>
+                <strong>Prevention Guidance</strong>
+                <p>Learn practical ways to help reduce future pest activity.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <a href="#contact" class="btn btn-green">Talk to Our Team ↗</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+
+    <section class="process-section" id="process">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="section-kicker">How It Works</div>
+          <h2>A Simple Service Process</h2>
+          <p>
+            Four simple steps to help you get started with your pest control enquiry.
+          </p>
+        </div>
+
+        <div class="process-grid">
+
+          <div class="process-card">
+            <div class="process-number">01</div>
+            <h3>Tell Us the Issue</h3>
+            <p>Describe the pest problem and the affected area.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-number">02</div>
+            <h3>Discuss Your Needs</h3>
+            <p>Talk about the pest issue and available treatment options.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-number">03</div>
+            <h3>Arrange a Visit</h3>
+            <p>Confirm the service area, price and appointment availability.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-number">04</div>
+            <h3>Prevention Advice</h3>
+            <p>Follow relevant guidance to help avoid recurring pest issues.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+
+    <section id="faq">
+      <div class="container faq-grid">
+
+        <div class="faq-intro">
+          <div class="section-kicker">FAQs</div>
+          <h2>Questions? We've Got Answers.</h2>
+          <p>
+            Need more information about a pest control service?
+            Send us an enquiry and discuss your requirements.
+          </p>
+          <a href="#contact" class="btn btn-green">Ask a Question ↗</a>
+        </div>
+
+        <div class="faq-list">
+
+          <details>
+            <summary>Which pest control services can I enquire about?</summary>
+            <p>
+              You can enquire about cockroach, bed bug, ant and rat control.
+              Contact us to discuss other pest concerns.
+            </p>
+          </details>
+
+          <details>
+            <summary>Do you offer residential and commercial services?</summary>
+            <p>
+              Contact us with your location and property type to check
+              the services available in your area.
+            </p>
+          </details>
+
+          <details>
+            <summary>How much does pest control cost?</summary>
+            <p>
+              Pricing depends on the pest, affected area and treatment requirements.
+              Contact the team for a quote.
+            </p>
+          </details>
+
+          <details>
+            <summary>Should I prepare my home before treatment?</summary>
+            <p>
+              Preparation depends on the treatment. Ask the service team
+              for specific instructions before the appointment.
+            </p>
+          </details>
+
+          <details>
+            <summary>Is pest treatment safe for children and pets?</summary>
+            <p>
+              Precautions depend on the treatment and product used.
+              Tell the service team about children and pets, and follow
+              all product-label and technician instructions.
+            </p>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+
+    <section class="contact-section" id="contact">
+      <div class="container contact-grid">
+
+        <div class="contact-copy">
+          <div class="section-kicker">Contact Us</div>
+          <h2>Let's Help You Take Back Your Space.</h2>
+
+          <p>
+            Tell us about your pest issue. Submit the form to prepare
+            an enquiry that you can send directly through WhatsApp.
+          </p>
+
+          <div class="contact-info">
+
+            <div class="contact-item">
+              <div class="contact-symbol">💬</div>
+              <div>
+                <strong>WhatsApp Enquiries</strong>
+                <span>Send your service details directly</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-symbol">🏠</div>
+              <div>
+                <strong>Home & Business</strong>
+                <span>Residential and commercial enquiries</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-symbol">📅</div>
+              <div>
+                <strong>Appointments</strong>
+                <span>Contact us to confirm availability</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <h3>Request a Service</h3>
+          <p class="form-intro">Enter your details and continue to WhatsApp.</p>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="customerName">Your Name *</label>
+              <input
+                id="customerName"
+                name="name"
+                type="text"
+                placeholder="Enter your name"
+                autocomplete="name"
+                required>
+            </div>
+
+            <div class="form-field">
+              <label for="customerPhone">Phone Number *</label>
+              <input
+                id="customerPhone"
+                name="phone"
+                type="tel"
+                inputmode="tel"
+                placeholder="Your phone number"
+                autocomplete="tel"
+                required>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="serviceType">Service Required *</label>
+            <select id="serviceType" name="service" required>
+              <option value="">Choose a service</option>
+              <option value="Cockroach Control">Cockroach Control</option>
+              <option value="Bed Bug Control">Bed Bug Control</option>
+              <option value="Ant Control">Ant Control</option>
+              <option value="Rat and Rodent Control">Rat & Rodent Control</option>
+              <option value="Other Pest Issue">Other Pest Issue</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="customerLocation">Your Area / Location *</label>
+            <input
+              id="customerLocation"
+              name="location"
+              type="text"
+              placeholder="Enter your area"
+              autocomplete="address-level2"
+              required>
+          </div>
+
+          <div class="form-field">
+            <label for="customerMessage">Tell Us More</label>
+            <textarea
+              id="customerMessage"
+              name="message"
+              placeholder="Describe the pest issue (optional)"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-green">
+            Send Enquiry on WhatsApp ↗
+          </button>
+
+          <p class="form-note">
+            WhatsApp will open with your enquiry ready to send.
+          </p>
+        </form>
+
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+
+    <div class="cta-band">
+      <div class="container cta-content">
+        <div>
+          <h2>Ready for a More Comfortable Space?</h2>
+          <p>Contact GPM Pest Control to discuss your pest management needs.</p>
+        </div>
+        <a href="#contact" class="btn">Request a Service ↗</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-about">
+          <a href="#home" class="brand">
+            <div class="brand-icon">G</div>
+            <div class="brand-name">
+              GPM
+              <small>PEST CONTROL</small>
+            </div>
+          </a>
+
+          <p>
+            Pest management enquiries for residential and commercial spaces.
+            Contact us to discuss a suitable service for your needs.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <a href="#home">Home</a>
+          <a href="#services">Our Services</a>
+          <a href="#about">About Us</a>
+          <a href="#process">Our Process</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="footer-column">
+          <h4>Our Services</h4>
+          <a href="#services">Cockroach Control</a>
+          <a href="#services">Bed Bug Control</a>
+          <a href="#services">Ant Control</a>
+          <a href="#services">Rat & Rodent Control</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="currentYear"></span> GPM Pest Control. All rights reserved.</span>
+        <span>Professional Pest Management Services</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <a
+    href="#contact"
+    class="floating-whatsapp"
+    id="floatingWhatsapp"
+    aria-label="Contact GPM Pest Control on WhatsApp">✆</a>
+
+  <script>
+    // Replace this placeholder with GPM's real WhatsApp number.
+    // Format: 91 followed by the 10-digit Indian mobile number.
+    // Use digits only: no + sign, spaces or hyphens.
+    const businessWhatsAppNumber = "919494977241";
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    // Mobile navigation
+    menuToggle.addEventListener("click", function () {
+      const isOpen = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.textContent = isOpen ? "×" : "☰";
+    });
+
+    navLinks.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    // Automatically update the copyright year.
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
+
+    // Preselect a service when a visitor clicks its service card.
+    document.querySelectorAll("[data-service]").forEach(function (link) {
+      link.addEventListener("click", function () {
+        document.getElementById("serviceType").value =
+          link.getAttribute("data-service");
+      });
+    });
+
+    // Open WhatsApp with a prefilled enquiry.
+    function openWhatsApp(message) {
+      if (!/^91\d{10}$/.test(businessWhatsAppNumber)) {
+        alert(
+          "Buddy, first add GPM's real WhatsApp number in index.html."
+        );
+        return;
+      }
+
+      const url =
+        "https://wa.me/" +
+        businessWhatsAppNumber +
+        "?text=" +
+        encodeURIComponent(message);
+
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+
+    document.getElementById("contactForm").addEventListener(
+      "submit",
+      function (event) {
+        event.preventDefault();
+
+        const name =
+          document.getElementById("customerName").value.trim();
+
+        const phone =
+          document.getElementById("customerPhone").value.trim();
+
+        const service =
+          document.getElementById("serviceType").value;
+
+        const location =
+          document.getElementById("customerLocation").value.trim();
+
+        const message =
+          document.getElementById("customerMessage").value.trim();
+
+        const whatsappMessage =
+          "Hello GPM Pest Control!\n\n" +
+          "I would like to enquire about your service.\n\n" +
+          "Name: " + name + "\n" +
+          "Phone: " + phone + "\n" +
+          "Service: " + service + "\n" +
+          "Location: " + location + "\n" +
+          "Issue details: " + (message || "Not provided");
+
+        openWhatsApp(whatsappMessage);
+      }
+    );
+
+    document.getElementById("floatingWhatsapp").addEventListener(
+      "click",
+      function (event) {
+        event.preventDefault();
+
+        openWhatsApp(
+          "Hello GPM Pest Control! I would like to enquire about your pest control services."
+        );
+      }
+    );
+  </script>
+
+</body>
+</html>
